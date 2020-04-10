@@ -5,7 +5,7 @@ Calculate Softmax layer of Attention in $O(L\log L)$$(L=$sequence length) insrea
 
 
 
-##Usage 
+## Usage 
 
 You only need `numpy >=1.18 `.
 

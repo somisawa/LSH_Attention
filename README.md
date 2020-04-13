@@ -1,7 +1,7 @@
 # LSH_Attention
 ## Description
 
-Calculate Softmax layer of Attention in $O(L\log L)$$(L=$sequence length) insread of $O(L^2)$ using the polytope [Locality-Sensitive Hashing](https://arxiv.org/abs/1802.05751 ). For more detail, look at this [paper](https://arxiv.org/abs/2001.04451 ).
+Calculate Softmax layer of Attention in $O(L\log L)(L=sequence length)$ instead of $O(L^2)$ using the polytope [Locality-Sensitive Hashing](https://arxiv.org/abs/1802.05751 ). For more detail, look at this [paper](https://arxiv.org/abs/2001.04451 ).
 
 
 
@@ -27,12 +27,12 @@ lsh_sm = lsh_softmax(R)
 
 ### Small size
 
-Note: For better visibility, the diagonal component rewritten to 0
+Note: For better visibility, the diagonal components are rewritten to 0
 
 <img width="847" alt="test" src="https://user-images.githubusercontent.com/37485236/79003287-3f403880-7b8d-11ea-97bc-9d3c6fc72a7b.png">
 
 ## Time complexity analysis
 
-The exec. time plotted for sequence lengths of $2^i$($i=4, 5, \cdots , 15$).
+The execution times are plotted for sequence lengths of $2^i$($i=4, 5, \cdots , 15$).
 
 ![time_analysis_log](https://user-images.githubusercontent.com/37485236/79003750-2c7a3380-7b8e-11ea-9cf7-337ad0bb5413.png)

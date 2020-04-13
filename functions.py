@@ -35,13 +35,12 @@ def lsh_softmax(R, seed=32):
         t = int(N//m)
         if i < int(m) - 1:
             sorted_idx = sorted_h_idx[t*i: t*(i+1)]
-            R_small = R[sorted_idx, :]
-            tmp = np.dot(R_small, R_small.T)
-            Q[np.ix_(sorted_idx, sorted_idx)] = softmax(tmp)
         else:
             sorted_idx = sorted_h_idx[t*i:]
-            R_small = R[sorted_idx, :]
-            tmp = np.dot(R_small, R_small.T)
-            Q[np.ix_(sorted_idx, sorted_idx)] = softmax(tmp)
+            
+        R_small = R[sorted_idx, :]
+        tmp = np.dot(R_small, R_small.T)
+        
+        Q[np.ix_(sorted_idx, sorted_idx)] = softmax(tmp)
 
     return Q

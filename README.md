@@ -1,4 +1,4 @@
-# LSH_Attention
+# A simple implementation of the LSH Attention in Reformer
 ## Description
 
 Calculate Softmax layer of Attention in $O(L\log L)(L=sequence length)$ instead of $O(L^2)$ using the cross-polytope [Locality-Sensitive Hashing](https://arxiv.org/abs/1802.05751 ). For more detail, look at this [paper](https://arxiv.org/abs/2001.04451 ).
